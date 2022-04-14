@@ -11,6 +11,14 @@
         android:id="@+id/mydata"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textSize="40dp"
+        android:text="hello"/>
+
+    <TextView
+        android:id="@+id/mydata2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="40dp"
         android:text="hello"/>
 
 

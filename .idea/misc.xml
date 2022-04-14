@@ -3,10 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="app/src/main/res/drawable/btn_custom.xml" value="0.1135" />
+        <entry key="app/src/main/res/drawable/buttonstyle.xml" value="0.1095" />
         <entry key="app/src/main/res/drawable/circle.xml" value="0.1565" />
+        <entry key="app/src/main/res/drawable/et_custom.xml" value="0.1135" />
+        <entry key="app/src/main/res/drawable/gradientbackground.xml" value="0.1135" />
         <entry key="app/src/main/res/drawable/img.xml" value="0.1565" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.25" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/activity_restaurent_owner.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_restaurent_resgister.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_set_profile_image.xml" value="0.10208333333333333" />
         <entry key="app/src/main/res/layout/foodcardview.xml" value="0.25" />
       </map>
     </option>
