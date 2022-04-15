@@ -45,7 +45,16 @@
                 android:layout_marginBottom="5dp"
                 android:textSize="15sp"
                 android:textColor="#000000"
-                android:text="lorem ipsam lorem ipsam lorem ipsamlorem ipsamlorem ipsam"/>
+                android:text="loreee lorem lorem ipsamlorem ipsamlorem ipsam"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:textSize="15sp"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:text="restaurant name"/>
 
             <LinearLayout
                 android:layout_width="wrap_content"

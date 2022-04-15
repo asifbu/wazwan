@@ -1,41 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RestaurentOwnerActivity"
-    android:background="@color/purple_200"
+    android:background="#ffffff"
     android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#ffffff">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="405dp">
+        android:layout_height="350dp">
+
         <LinearLayout
-            android:background="@drawable/gradientbackground"
             android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:orientation="vertical">
+            android:layout_height="210dp"
+            android:background="#ffffff"
+            android:orientation="horizontal">
+
             <ImageView
-                android:layout_marginTop="45dp"
-                android:layout_gravity="center_horizontal"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:layout_marginTop="10dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Wiliam Snoe"
-                android:textColor="#fff"
-                android:textStyle="bold"
-                android:textSize="21sp"/>
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="45dp"
+                android:src="@drawable/food3" />
+
+           <LinearLayout
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginLeft="15dp"
+               android:layout_marginTop="55dp"
+               android:layout_marginRight="20dp"
+               android:orientation="vertical">
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Wiliam Snoe"
+                   android:textColor="#000000"
+                   android:textSize="17sp"
+                   android:textStyle="bold" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="+8801714933217"
+                   android:layout_marginTop="6dp"
+                   android:textColor="#000000"
+                   android:textSize="15sp"
+                   android:textStyle="normal" />
+               <TextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Amtola panir taki road,sodor, barsial"
+                   android:layout_marginTop="6dp"
+                   android:textColor="#000000"
+                   android:textSize="15sp"
+                   android:textStyle="normal" />
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_marginTop="6dp"
+                  android:orientation="horizontal">
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Edit Profile"
+                      android:textColor="#000000"
+                      android:textSize="15sp"
+                      android:textStyle="bold" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="&amp;"
+                      android:layout_marginLeft="4dp"
+                      android:textColor="#000000"
+                      android:textSize="15sp"
+                      android:textStyle="bold" />
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:text="Image"
+                      android:layout_marginLeft="4dp"
+                      android:textColor="#000000"
+                      android:textSize="15sp"
+                      android:textStyle="bold" />
+              </LinearLayout>
+
+           </LinearLayout>
         </LinearLayout>
         <androidx.cardview.widget.CardView
-            android:layout_width="400dp"
+            android:layout_width="360dp"
             android:layout_height="120dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="275dp">
+            android:layout_marginTop="220dp">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -50,18 +112,12 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Photos"
+                        android:text="Add\nNew Item"
+                        android:textColor="@color/purple_200"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
                         android:textSize="20sp"
                         />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="125"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:paddingTop="10dp"
-                        android:textColor="@color/purple_200"/>
-
                 </LinearLayout>
                 <LinearLayout
                     android:gravity="center"
@@ -72,18 +128,21 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Followers"
+                        android:text="Member"
+                        android:textColor="@color/purple_200"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
                         android:textSize="20sp"
                         />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="1205"
-                        android:textStyle="bold"
+                        android:text="20"
+                        android:textColor="@color/purple_200"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
                         android:textSize="20sp"
-                        android:paddingTop="10dp"
-                        android:textColor="@color/purple_200"/>
-
+                        />
                 </LinearLayout>
                 <LinearLayout
                     android:gravity="center"
@@ -94,105 +153,18 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Following"
+                        android:text="Edit\nItem"
+                        android:textColor="@color/purple_200"
+                        android:textStyle="normal"
+                        android:textAlignment="center"
                         android:textSize="20sp"
                         />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="360"
-                        android:textStyle="bold"
-                        android:textSize="20sp"
-                        android:paddingTop="10dp"
-                        android:textColor="@color/purple_200"/>
-
                 </LinearLayout>
             </LinearLayout>
 
         </androidx.cardview.widget.CardView >
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="360dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        android:layout_marginTop="45dp">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="Wiliam@gmail.com"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:textStyle="bold"
-
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="+266 225 225"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:textStyle="bold"
-
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="Add to group"/>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_marginTop="25dp"
-            android:orientation="horizontal"
-            android:paddingLeft="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/ic_baseline_account_circle_24"/>
-            <TextView
-                android:textStyle="bold"
-
-                android:layout_gravity="center_vertical"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:paddingLeft="20dp"
-                android:text="Show all comments"/>
-        </LinearLayout>
-    </LinearLayout>
 
     <Button
         android:textColor="#fff"
@@ -202,4 +174,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Follow Me"/>
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
