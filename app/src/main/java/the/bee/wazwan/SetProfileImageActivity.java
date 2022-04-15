@@ -71,9 +71,6 @@ public class SetProfileImageActivity extends AppCompatActivity {
 
                        displayName.setText(name);
                     Picasso.get().load(image).into(settingDisplayProfileImage);
-                    //   Picasso.get().load(imageUri).into(settingDisplayProfileImage);
-
-                    // Do stuff
                 }
                 else
                 {
@@ -97,7 +94,6 @@ public class SetProfileImageActivity extends AppCompatActivity {
                 intent.setAction(Intent.ACTION_GET_CONTENT);
                 intent.setType("image/*");
                 startActivityForResult(Intent.createChooser(intent, "select picture"), Gallery_Pick);
-
             }
         });
 
@@ -113,10 +109,8 @@ public class SetProfileImageActivity extends AppCompatActivity {
             Uri ImageUri=data.getData();
             final StorageReference  filepath = storeProfileImage.child(android_id +".jpg");
 
-
                 filepath.putFile(ImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>()
                 {
-
                     @Override
                     public Task<Uri> then(@NonNull Task<UploadTask.TaskSnapshot> task) throws Exception
                     {
@@ -133,7 +127,6 @@ public class SetProfileImageActivity extends AppCompatActivity {
                         if (task.isSuccessful())
                         {
                             final Uri downUri = task.getResult();
-
 
                             //String current_user_Id = mAuth.getCurrentUser().getUid();
                             getUserDataReference = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child("restaurantdetails").child(android_id);

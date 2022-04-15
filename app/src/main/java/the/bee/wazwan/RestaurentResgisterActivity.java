@@ -63,6 +63,4 @@ public class RestaurentResgisterActivity extends AppCompatActivity {
         Intent intent = new Intent(RestaurentResgisterActivity.this,SetProfileImageActivity.class);
         startActivity(intent);
     }
-
-
 }
