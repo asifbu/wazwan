@@ -1,14 +1,18 @@
 package the.bee.wazwan;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -40,6 +44,14 @@ public class RestaurentOwnerActivity extends AppCompatActivity {
         AddNewItem          =findViewById(R.id.add_new_item);
         EditItem            =findViewById(R.id.edit_item);
         RestaurantImage     = findViewById(R.id.profile_image);
+
+        AddNewItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =  new Intent(RestaurentOwnerActivity.this,AddProductActivity.class);
+                startActivity(intent);
+            }
+        });
 
         String android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
         getUserData = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child("restaurantdetails").child(android_id);

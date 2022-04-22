@@ -39,12 +39,18 @@ public class SetProfileImageActivity extends AppCompatActivity {
     private String imageUrl;
     String android_id ;
 
+    //use this variable for take data for other intent
+    String database,id;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_set_profile_image);
 
+
+        Intent intent = getIntent();
+        id = intent.getExtras().getString("id");
+        database = intent.getExtras().getString("database");
 
         settingDisplayProfileImage =  findViewById(R.id.setting_profile_image);
         settingChangeProfileImageButton = findViewById(R.id.setting_profile_image_button);
@@ -56,8 +62,9 @@ public class SetProfileImageActivity extends AppCompatActivity {
         //mAuth = FirebaseAuth.getInstance();
        // String online_user_id = mAuth.getCurrentUser().getUid();
         android_id = Settings.Secure.getString(getApplicationContext().getContentResolver(), Settings.Secure.ANDROID_ID);
-        getUserDataReference = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child("restaurantdetails").child(android_id);
-        storeProfileImage = FirebaseStorage.getInstance().getReference().child("profile_images");
+        getUserDataReference = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child(database).child(id);
+        storeProfileImage = FirebaseStorage.getInstance().getReference().child(database);
+
 
         getUserDataReference.addValueEventListener(new ValueEventListener()
         {
@@ -107,7 +114,7 @@ public class SetProfileImageActivity extends AppCompatActivity {
         if (requestCode==Gallery_Pick  &&  resultCode==RESULT_OK  &&  data!=null)
         {
             Uri ImageUri=data.getData();
-            final StorageReference  filepath = storeProfileImage.child(android_id +".jpg");
+            final StorageReference  filepath = storeProfileImage.child(id +".jpg");
 
                 filepath.putFile(ImageUri).continueWithTask(new Continuation<UploadTask.TaskSnapshot, Task<Uri>>()
                 {
@@ -129,7 +136,7 @@ public class SetProfileImageActivity extends AppCompatActivity {
                             final Uri downUri = task.getResult();
 
                             //String current_user_Id = mAuth.getCurrentUser().getUid();
-                            getUserDataReference = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child("restaurantdetails").child(android_id);
+                            getUserDataReference = FirebaseDatabase.getInstance("https://wazwan-fdbbf-default-rtdb.firebaseio.com/").getReference().child(database).child(id);
 
                             // Map<String,String> map = new HashMap<>();
                             //  map.put("applicants_image",downUri.toString());

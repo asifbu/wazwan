@@ -61,6 +61,8 @@ public class RestaurentResgisterActivity extends AppCompatActivity {
         storeUserDefaultDataReference.child("id").setValue(android_id);
 
         Intent intent = new Intent(RestaurentResgisterActivity.this,SetProfileImageActivity.class);
+        intent.putExtra("database","restaurantdetails");
+        intent.putExtra("id",android_id);
         startActivity(intent);
     }
 }
