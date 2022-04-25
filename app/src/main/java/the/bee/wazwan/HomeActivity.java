@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class HomeActivity extends AppCompatActivity {
 
-    TextView textView, textView2;
+    TextView textView, textView2, textView3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,7 @@ public class HomeActivity extends AppCompatActivity {
 
         textView = findViewById(R.id.mydata);
         textView2 = findViewById(R.id.mydata2);
+        textView3 = findViewById(R.id.mydata3);
 
         textView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +45,14 @@ public class HomeActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeActivity.this,RestaurentOwnerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        textView3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(HomeActivity.this,MainPageActivity.class);
                 startActivity(intent);
             }
         });

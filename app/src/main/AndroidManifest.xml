@@ -12,6 +12,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Wazwan">
         <activity
+            android:name=".ProductShowActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainPageActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main_page"
+            android:theme="@style/Theme.Wazwan.NoActionBar" />
+        <activity
             android:name=".AddProductActivity"
             android:exported="false" />
         <activity
